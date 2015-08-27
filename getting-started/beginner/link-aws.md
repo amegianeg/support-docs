@@ -53,7 +53,10 @@ provided for **Policy Document**.
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Action": "ec2:*",
+      "Action": [
+        "ec2:*",
+        "iam:ListInstanceProfiles"
+      ],
       "Effect": "Allow",
       "Resource": "*"
     }
@@ -68,7 +71,10 @@ If you want to limit Tutum to a specific EC2 Region, you can use the following p
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Action": "ec2:*",
+      "Action": [
+        "ec2:*",
+        "iam:ListInstanceProfiles"
+      ],
       "Effect": "Allow",
       "Resource": "*",
       "Condition": {
